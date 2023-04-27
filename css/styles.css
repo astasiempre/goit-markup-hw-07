@@ -24,6 +24,7 @@ ul {
   margin-bottom: 0;
   padding-left: 0;
 }
+
 img {
   display: block;
   max-width: 100%;
@@ -43,22 +44,53 @@ img {
   overflow: hidden;
 }
 
-.header {
+/* .header {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-.container {
+} */
+/* .container {
   width: 1158px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
+} */
+ 
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+ 
 }
-.header-container {
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 428px;
+  margin-left: auto;
+  margin-right: auto;}
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+width: 766px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1158px;
+  }
+}
+
+
+
+
+/* .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
+
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--primary-text-color);
@@ -75,7 +107,7 @@ body {
 
 /* Logo */
 
-.logo {
+/* .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -85,21 +117,21 @@ body {
   color: var(--logo-text-color);
   margin-right: 76px;
   align-items: center;
-}
+} */
 
-.logo-part {
+/* .logo-part {
   color: var(--title-text-color);
-}
+} */
 
-.header-nav {
+/* .header-nav {
   display: flex;
   align-items: center;
   margin-right: auto;
-}
+} */
 
 /* Site-nav */
 
-.site-nav {
+/* .site-nav {
   display: flex;
   align-items: center;
   gap: 40px;
@@ -165,6 +197,37 @@ body {
 .address-link:hover,
 .address-link:focus {
   color: var(--accent-text-color);
+} */
+
+/* @media screen  and (max-width: 1199px) {
+
+  }
+} */
+
+@media screen and (max-width: 767px) {
+  .site-nav {
+    display: none;
+  }
+
+  .address {
+    display: none;
+  }
+}
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.header-container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.mobile-menu-open {
+background-color: transparent;
+border: none;
+padding: 0;
 }
 
 /* Hero */
