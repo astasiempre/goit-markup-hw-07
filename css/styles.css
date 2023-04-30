@@ -344,6 +344,115 @@ body {
   transition: background-color var(--transition-duration-func);
 }
 
+/* Hero */
+
+.hero {
+  background-color: var(--title-text-color);
+  padding: 112px 0;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/people-office-1.jpg);
+  width: 100%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(40/36);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--primary-white-color);
+  margin: 0 auto 72px;
+  max-width: 320px;
+  height: 80px;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.04em;
+  color: var(--primary-white-color);
+  background-color: var(--logo-text-color);
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  padding: 16px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  max-width: 169px;
+  height: 56px;
+  border: none;
+  margin: 0 auto;
+  transition: background-color var(--transition-duration-func);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--accent-text-color);
+}
+
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+/* Advantage */
+
+.advantage-icon-wrap {
+  display: none;
+}
+
+
+.advantage-item {
+  margin-bottom: 72px;
+}
+
+.advantage-list {
+  display: flex;
+
+}
+
+.advantage-list .title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  margin-bottom: 8px;
+}
+
+/* .advantage-list > .advantage-item {
+  flex-basis: calc((100% - 3 * 24px) / 4);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+} */
+
+.advantage-list .text {
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.02em;
+}
+
+.advantage-icon-wrap {
+  background-color: var(--footer-logo-part-color);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  width: 100%;
+}
 }
 
 @media screen and (min-width: 768px) {
@@ -356,14 +465,14 @@ display:none;
 .header-container {
   display: flex;
   align-items: center;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .header-nav {
   display: flex;
   align-items: center;
   margin-right: auto;
-/* padding: 24px 0; */
+
 }
 
 .site-nav {
@@ -414,19 +523,17 @@ display:none;
 
 .address {
   font-style: normal;
+
 }
 
-.address-list {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+.address-item:first-child {
+margin-bottom: 12px;
 }
 
 .address-link {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: calc(24 / 16);
-  letter-spacing: 0.02em;
+  font-size: 12px;
+  line-height: calc(14/12);
+  letter-spacing: 0.04em;
   color: var(--primary-text-color);
   transition: color var(--transition-duration-func);
 }
@@ -435,15 +542,13 @@ display:none;
 .address-link:focus {
   color: var(--accent-text-color);
 }
-}
-/* Hero */
 
-/* .hero {
+.hero {
   background-color: var(--title-text-color);
-  padding: 188px 0;
+  padding: 112px 0;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/people-office-1.jpg);
-  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -453,13 +558,13 @@ display:none;
 .hero-title {
   font-weight: 700;
   font-size: 56px;
-  line-height: 1.07;
+  line-height: calc(60/56);
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--primary-white-color);
-  margin: 0 auto 48px;
+  margin: 0 auto 36px;
   max-width: 496px;
-  height: 120px;
+  max-height: 120px;
 }
 
 .hero-container {
@@ -481,7 +586,7 @@ display:none;
   padding: 16px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  min-width: 169px;
+  max-width: 169px;
   height: 56px;
   border: none;
   margin: 0 auto;
@@ -492,15 +597,42 @@ display:none;
 .button:focus {
   background-color: var(--accent-text-color);
 }
+}
 
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-} */
+
+@media screen and (min-width: 1200px) {
+.logo {
+    margin-right: 76px;
+  }
+
+  .address-list {
+    display: flex;
+  }
+
+  .address-item:first-child {
+    margin-bottom: 0;
+  }
+  .address-item:last-child {
+margin-left: 40px;
+}
+
+.hero {
+  padding-top: 180px;
+    padding-bottom: 196px;
+}
+
+.hero-title {
+  margin: 0 auto 48px;
+}
+
+
+}
+
+
 
 /* Advantage */
 
-.advantage-list {
+/* .advantage-list {
   display: flex;
   gap: 24px;
 }
@@ -536,7 +668,7 @@ display:none;
   justify-content: center;
   height: 112px;
   width: 100%;
-}
+} */
 
 /* what are we doing */
 
