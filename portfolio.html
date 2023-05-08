@@ -19,7 +19,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
+       <header class="header">
       <div class="container header-container">
         <nav class="header-nav">
           <a class="logo link" href="./index.html">Web<span class="logo-part">Studio</span></a>
@@ -29,6 +29,11 @@
             <li class="site-nav-item"><a class="link" href="">Contacts</a></li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu-open js-open-menu">
+          <svg class="mobile-menu-open-icon" width="32" height="32">
+            <use href="./images/icon.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
         <address class="address">
           <ul class="list address-list">
             <li class="address-item">
@@ -39,6 +44,58 @@
             </li>
           </ul>
         </address>
+      </div>
+      <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu_container">
+          <ul class="list mobile-menu-list">
+            <li class="mobile-menu-item"
+              ><a class="mobile-menu-link link current" href="./index.html">Studio</a></li
+            >
+            <li class="mobile-menu-item"
+              ><a class="mobile-menu-link link" href="./portfolio.html">Portfolio</a></li
+            >
+            <li class="mobile-menu-item"><a class="mobile-menu-link link" href="">Contacts</a></li>
+          </ul>
+          <address class="mobile-menu-address">
+            <ul class="list address-mobile-list">
+              <li class="address-mobile-menu-item"
+                ><a class="address-mobile-phone-menu-link link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                ></li
+              >
+              <li class="address-mobile-menu-item"
+                ><a class="address-mobile-mail-menu-link link" href="">info@devstudio.com</a></li
+              >
+            </ul>
+          </address>
+          <ul class="list mobile-social-list">
+            <li class="mobile-menu-social-item"
+              ><a class="mobile-menu-social-link" href=""
+                ><svg class="mobile-menu-social-icon" width="24" height="24">
+                  <use href="./images/icon.svg#icon-instagram"></use></svg></a
+            ></li>
+            <li class="mobile-menu-social-item"
+              ><a class="mobile-menu-social-link" href=""
+                ><svg class="mobile-menu-social-icon" width="24" height="24">
+                  <use href="./images/icon.svg#icon-twitter"></use></svg></a
+            ></li>
+            <li class="mobile-menu-social-item"
+              ><a class="mobile-menu-social-link" href=""
+                ><svg class="mobile-menu-social-icon" width="24" height="24">
+                  <use href="./images/icon.svg#icon-facebook"></use></svg></a
+            ></li>
+            <li class="mobile-menu-social-item"
+              ><a class="mobile-menu-social-link" href=""
+                ><svg class="mobile-menu-social-icon" width="24" height="24">
+                  <use href="./images/icon.svg#icon-linkedin"></use></svg></a
+            ></li>
+          </ul>
+          <button class="mobile-menu_close-btn js-close-menu">
+            <svg class="mobile-menu_close-icon" width="8" height="8">
+              <use href="./images/icon.svg#icon-close-btn"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
     <main>
@@ -245,8 +302,10 @@
         </div>
       </section>
     </main>
+
     <!-- footer -->
-    <footer class="footer">
+
+<footer class="footer">
       <div class="container footer-container">
         <div class="logo-wrap">
           <a class="logo link" href="./index.html">Web<span class="logo-part">Studio</span></a>
@@ -290,17 +349,89 @@
           </ul>
         </div>
         <div class="footer-subscribe-wrap">
-          <label class="footer-subscribe-field">
-            <p class="footer-subscribe-field-desc">Subscribe</p>
-            <input class="footer-subscribe-field-input" type="email" name="user_email" placeholder="E-mail" />
-          </label>
-          <button  type="submit" class="footer-subscribe-btn">Subscribe
-            <svg class="footer-subscribe-icon" width="24" height="24">
+          <p class="footer-subscribe-field-desc">Subscribe</p>
+          <form class="footer-form">
+            <label class="footer-subscribe-field">
+              <input
+                class="footer-subscribe-field-input"
+                type="email"
+                name="user_email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="footer-subscribe-btn"
+              >Subscribe
+              <svg class="footer-subscribe-icon" width="24" height="24">
                 <use href="./images/icon.svg#icon-subscribe-telegram"></use>
               </svg>
-          </button>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
+
+     <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-close-btn-icon" width="8" height="8">
+            <use href="./images/icon.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+        <form class="modal-form">
+          <p class="modal-desc">Leave your contacts and we will call you back</p>
+          <label class="modal-form-field">
+            <span class="modal-form-imput-desc"> Name </span>
+            <span class="modal-form-input-wrap">
+              <input type="text" name="user_name" class="modal-form-input" />
+              <svg class="modal-form-imput-icon" width="12" height="12">
+                <use href="./images/icon.svg#icon-name"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-imput-desc"> Phone </span>
+            <span class="modal-form-input-wrap">
+              <input type="tel" name="user_phone" class="modal-form-input" />
+              <svg class="modal-form-imput-icon" width="13" height="13">
+                <use href="./images/icon.svg#icon-phone"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-imput-desc"> Email </span>
+            <span class="modal-form-input-wrap">
+              <input type="email" name="user_email" class="modal-form-input" />
+              <svg class="modal-form-imput-icon" width="15" height="12">
+                <use href="./images/icon.svg#icon-email"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-imput-desc">Comment</span>
+            <textarea
+              class="modal-form-massage"
+              name="user_massage"
+              placeholder="Text input"
+            ></textarea>
+          </label>
+          <input
+            id="user-policy"
+            type="checkbox"
+            name="user_policy"
+            class="modal-form-check visually-hidden"
+          />
+          <label for="user-policy" class="modal-form-check-desk"
+            >
+            <span>accept the terms and conditions of the&nbsp;<a class="footer-modal-link" href=""
+              >Privacy Policy</a>
+            </span>
+            </label
+          >
+          <button type="submit" class="modal-form-submit-btn">Send</button>
+        </form>
+      </div>
+    </div>
+       <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
